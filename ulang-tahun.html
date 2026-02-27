@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nazwa Aulia Rizkia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Styles --- */
+        :root {
+            --primary-blue: #4A90E2;
+            --soft-blue: #E3F2FD;
+            --dark-blue: #1565C0;
+            --white: #ffffff;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #89CFF0 0%, #E0F7FA 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Floating Background Elements */
+        .bg-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: floatUp 10s infinite linear;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Main Card */
+        .container {
+            background: var(--white);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(21, 101, 192, 0.2);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin: 20px;
+            border: 4px solid var(--soft-blue);
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            color: var(--dark-blue);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #E3F2FD;
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .age-box {
+            background-color: var(--soft-blue);
+            color: var(--dark-blue);
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Photo Placeholder */
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Button */
+        .btn-surprise {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            margin-top: 10px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .btn-surprise:hover {
+            background-color: var(--dark-blue);
+            transform: scale(1.05);
+        }
+
+        /* Hidden Message */
+        .message-box {
+            display: none;
+            margin-top: 20px;
+            background-color: #F0F8FF;
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-blue);
+            text-align: left;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Confetti (Simple CSS) */
+        .heart {
+            position: absolute;
+            color: #FF6B6B;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="bg-decoration" id="bg-decoration"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="photo-frame">
+            <!-- Ganti link di bawah ini dengan foto pacar kamu (gunakan link foto dari google drive atau internet yang sudah jadi direct link) -->
+            <!-- Contoh gambar placeholder di bawah ini -->
+            <img src="nazwa.jpg" alt="Nazwa Aulia Rizkia">
+        </div>
+
+        <h1>Happy Birthday!</h1>
+        <h2>Nazwa Aulia Rizkia ❤️</h2>
+        
+        <div class="age-box">
+            Umur: 19 Tahun
+        </div>
+
+        <p>Halo Nazwa Aulia Rizkia,</p>
+        <p>Selamat ulang tahun yang ke-19! Kamu sekarang sudah semakin dewasa dan cantikk yaaa. 🥰</p>
+        <p>Aku harap semua harapan dan mimpi kamu bisa tercapaii. Sehat selalu yaa, biar kita selalu bareng yaa sayangg 😄</p>
+
+        <button class="btn-surprise" onclick="showMessage()">Buka Kejutan 🔽</button>
+
+        <div class="message-box" id="messageBox">
+            <p><strong>Pesan Khusus:</strong></p>
+            <p>"Haii Nazwa Terima kasih sudah lahir ke dunia  ini sayanggg, Semangat teruss yaaa. Semoga apa yang kmu ingin kan bisa tercapi yaaa! Selamat ulang tahun sayanggg! love youu 💙🎂"</p>
+        </div>
+
+        <div class="footer">
+            Created with love by [JANA]
+        </div>
+    </div>
+
+    <script>
+        // --- JavaScript Logic ---
+
+        // 1. Membuat efek balon/hearts di latar belakang
+        function createBubbles() {
+            const bg = document.getElementById('bg-decoration');
+            const bubbleCount = 20;
+
+            for (let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                // Ukuran acak
+                const size = Math.random() * 40 + 10 + 'px';
+                bubble.style.width = size;
+                bubble.style.height = size;
+                
+                // Posisi awal acak
+                bubble.style.left = Math.random() * 100 + 'vw';
+                
+                // Durasi animasi acak
+                bubble.style.animationDuration = Math.random() * 5 + 5 + 's';
+                
+                // Delay acak
+                bubble.style.animationDelay = Math.random() * 5 + 's';
+
+                bg.appendChild(bubble);
+            }
+        }
+
+        // 2. Fungsi untuk menampilkan pesan rahasia
+        function showMessage() {
+            const messageBox = document.getElementById('messageBox');
+            const btn = document.querySelector('.btn-surprise');
+            
+            if (messageBox.style.display === 'block') {
+                messageBox.style.display = 'none';
+                btn.innerText = "Buka Kejutan 🔽";
+            } else {
+                messageBox.style.display = 'block';
+                btn.innerText = "Tutup Pesan 🔼";
+                
+                // Jadiin automatically scroll ke bawah
+                messageBox.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Jalankan fungsi saat halaman dimuat
+        window.onload = createBubbles;
+    </script>
+</body>
+</html>
